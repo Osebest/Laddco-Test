@@ -1,0 +1,127 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import menuIcon from "@/assets/icons/menu.png";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetClose,
+} from "@/components/ui/sheet";
+import RequestInformation from "@/app/home/components/RequestInformation";
+
+const navLinks = [
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/clients", label: "Clients" },
+  { href: "/industries", label: "Industries" },
+  { href: "/presence", label: "Presence" },
+  { href: "/client-login", label: "Client Login" },
+] as const;
+
+export function Navbar() {
+  const pathname = usePathname();
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
+      <nav className="mx-3.75 md:mx-auto flex h-15 max-w-7xl border-l border-r md:border-r-0 items-center justify-between pr-4">
+        {/* Logo + Company name */}
+        <Link href="/" className="flex items-center md:gap-8">
+          <div className="w-14 mx-auto h-15 flex items-center justify-center md:border-r md:border-border">
+            <Image
+              src="/logo.png"
+              alt="Ladd & Co. logo"
+              width={24}
+              height={24}
+              priority
+            />
+          </div>
+          <span className="text-lg font-medium tracking-tight">
+            Ladd &amp; Co.
+          </span>
+        </Link>
+
+        {/* Desktop links */}
+        <ul className="hidden items-center gap-1 lg:gap-10 md:flex">
+          {navLinks.map(({ href, label }, index) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`rounded-md px-3 py-2 text-[13px] font-mono uppercase text-[#635A4E] transition-colors hover:bg-foreground/5
+                  ${index === navLinks.length - 1 ? "font-semibold" : ""}
+                `}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile hamburger */}
+        <Sheet>
+          <SheetTrigger
+            render={
+              <Button variant="ghost" size="icon" className="md:hidden" />
+            }
+          >
+            <Image src={menuIcon} alt="menu" width={24} height={24} priority />
+            <span className="sr-only">Open menu</span>
+          </SheetTrigger>
+
+          <SheetContent
+            side="top"
+            className="h-dvh w-full bg-background"
+            showCloseButton={false}
+          >
+            {/* Mirror the mobile navbar header */}
+            <nav className="mx-4 flex h-15 border-l border-r items-center justify-between pr-4">
+              <Link href="/" className="flex items-center gap-8">
+                <Image
+                  src="/logo.png"
+                  alt="Ladd & Co. logo"
+                  width={36}
+                  height={36}
+                  className="h-15 w-auto px-4 py-4 border-r border-border"
+                  priority
+                />
+                <span className="text-lg font-medium tracking-tight">
+                  Ladd &amp; Co.
+                </span>
+              </Link>
+
+              <SheetClose render={<Button variant="ghost" size="icon" />}>
+                <Image src={menuIcon} alt="Close menu" width={24} height={24} />
+              </SheetClose>
+            </nav>
+
+            {/* Centered nav links */}
+            <ul className="flex flex-col bg-[#C5CAAA] h-full items-center gap-12">
+              <RequestInformation isDark />
+              {navLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <SheetClose
+                    render={
+                      <Link
+                        href={href}
+                        className={`text-xl py-2 font-mono uppercase tracking-wide transition-colors hover:text-foreground ${
+                          pathname === href
+                            ? "text-foreground"
+                            : "text-[#635A4E]"
+                        }`}
+                      />
+                    }
+                  >
+                    {label}
+                  </SheetClose>
+                </li>
+              ))}
+            </ul>
+          </SheetContent>
+        </Sheet>
+      </nav>
+    </header>
+  );
+}
