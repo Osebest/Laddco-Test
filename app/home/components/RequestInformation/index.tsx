@@ -8,7 +8,7 @@ const RequestInformation = ({ isDark }: RequestInformationProps) => {
   return (
     <div className={`h-11 ${isDark ? "bg-[#25211B] w-full!" : ""}`}>
       <div
-        className={`max-w-7xl cursor-pointer md:mx-auto flex items-center justify-between border-y border-border gap-4 md:gap-8 bg-linear-to-r from-[#C5CAAA] to-[${isDark ? "#25211B" : "#F3F1EF"}]`}
+        className={`max-w-7xl cursor-pointer md:mx-auto flex items-center justify-between gap-4 md:gap-8 bg-linear-to-r from-[#C5CAAA] to-[${isDark ? "#25211B" : "#F3F1EF"}]`}
       >
         {!isDark && (
           <div className="w-4.5 flex md:hidden border-x border-border h-11 items-center justify-center">

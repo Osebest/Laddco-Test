@@ -18,27 +18,27 @@ const geistMono = Geist_Mono({
 const ppEiko = localFont({
   src: [
     {
-      path: "./fonts/PPEiko-Thin.otf",
+      path: "../assets/fonts/PPEiko-Thin.otf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./fonts/PPEiko-Thin.otf",
+      path: "../assets/fonts/PPEiko-Thin.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/PPEiko-Medium.otf",
+      path: "../assets/fonts/PPEiko-Medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/PPEiko-Medium.otf",
+      path: "../assets/fonts/PPEiko-Medium.otf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "./fonts/PPEiko-Heavy.otf",
+      path: "../assets/fonts/PPEiko-Heavy.otf",
       weight: "700",
       style: "normal",
     },
