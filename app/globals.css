@@ -7,6 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-red: var(--accent-red);
   --font-sans: var(--font-pp-eiko), ui-serif, Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --font-heading: var(--font-pp-eiko), ui-serif, Georgia, serif;
@@ -51,7 +54,10 @@
 
 :root {
   --background: #f3f1ef;
-  --foreground: #252422;
+  --foreground: #25211b;
+  --text-primary: #25211b;
+  --text-secondary: #635a4e;
+  --accent-red: #cd5c1c;
   --card: #ffffff;
   --card-foreground: #252422;
   --popover: #ffffff;

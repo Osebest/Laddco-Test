@@ -50,7 +50,7 @@ export function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`rounded-md px-3 py-2 text-[13px] font-mono uppercase text-[#635A4E] transition-colors hover:bg-foreground/5
+                className={`rounded-md px-3 py-2 text-[13px] font-mono uppercase text-text-secondary transition-colors hover:bg-foreground/5
                   ${index === navLinks.length - 1 ? "font-semibold" : ""}
                 `}
               >
@@ -109,7 +109,7 @@ export function Navbar() {
                         className={`text-xl py-2 font-mono uppercase tracking-wide transition-colors hover:text-foreground ${
                           pathname === href
                             ? "text-foreground"
-                            : "text-[#635A4E]"
+                            : "text-text-secondary"
                         }`}
                       />
                     }

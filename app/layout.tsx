@@ -42,6 +42,21 @@ const ppEiko = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../assets/fonts/PP Eiko Italic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/PP Eiko Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/PP Eiko Italic Light.ttf",
+      weight: "500",
+      style: "italic",
+    },
   ],
   variable: "--font-pp-eiko",
   display: "swap",
