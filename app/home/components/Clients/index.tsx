@@ -26,11 +26,15 @@ const Clients = () => {
             src={heroSmall}
             alt="ClientsSection"
             className="block md:hidden w-full h-auto object-cover"
+            sizes="100vw"
+            quality={80}
           />
           <Image
             src={heroLarge}
             alt="ClientsSection"
             className="hidden md:block w-full h-auto object-cover my-8"
+            sizes="(max-width: 768px) 0px, 600px"
+            quality={80}
           />
         </div>
 

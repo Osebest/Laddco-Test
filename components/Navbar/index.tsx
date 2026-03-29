@@ -111,7 +111,7 @@ export function Navbar() {
                 className={`w-full cursor-pointer flex items-center justify-between gap-8 bg-linear-to-r from-[#C5CAAA] to-text-primary/70`}
               >
                 <div
-                  className={`h-11 w-19.5 flex items-center justify-center border-x border-border`}
+                  className={`h-11 w-19.75 flex items-center justify-center border-x border-border`}
                 >
                   <SquareDot />
                 </div>

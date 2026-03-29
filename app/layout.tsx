@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { PageLoadAnimation } from "@/components/PageLoadAnimation";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -88,6 +89,7 @@ export default function RootLayout({
       className={`${ppEiko.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <PageLoadAnimation />
         <SmoothScroll>
           <Navbar />
           {children}
