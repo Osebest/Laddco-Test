@@ -24,11 +24,11 @@ const ServiceSection = () => {
         {/* Text content */}
         <div className="flex-1 mx-4 md:mx-0 px-8 py-8 md:py-16 border-x md:border-x-0 md:border-r border-border">
           <div className="flex flex-col gap-8">
-            <p className="font-mono text-[13px] uppercase tracking-widest text-text-secondary">
+            <p className="hidden md:block font-mono text-[13px] uppercase tracking-widest text-text-secondary">
               Services
             </p>
-            <p className="text-[22px] md:text-[48px] leading-[130%]">
-              Advisory & Execution
+            <p className="text-[32px] md:text-[48px] leading-[130%]">
+              Advisory <br />& Execution
             </p>
           </div>
         </div>
@@ -84,14 +84,12 @@ const ServiceSection = () => {
               {otherServices.map((service, index) => (
                 <div
                   key={index}
-                  className="p-6 md:py-12 md:pl-18 md:pr-8 border-b border-r border-border"
+                  className="p-6 md:py-12 font-geist text-[15px] md:pl-18 md:pr-8 md:border-b md:border-r border-border"
                 >
-                  <p className="text-[22px] mb-2 md:mb-5 md:text-2xl leading-[140%]">
+                  <p className="md:mb-2 font-medium leading-[140%]">
                     {service.title}
                   </p>
-                  <p className="font-geist text-[15px] text-text-secondary">
-                    {service.description}
-                  </p>
+                  <p className="text-text-secondary">{service.description}</p>
                 </div>
               ))}
             </div>

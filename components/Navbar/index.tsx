@@ -19,6 +19,14 @@ const navLinks = [
   { href: "/clients", label: "Clients" },
   { href: "/industries", label: "Industries" },
   { href: "/presence", label: "Presence" },
+] as const;
+
+const desktopNavLinks = [
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/clients", label: "Clients" },
+  { href: "/industries", label: "Industries" },
+  { href: "/presence", label: "Presence" },
   { href: "/client-login", label: "Client Login" },
 ] as const;
 
@@ -46,12 +54,13 @@ export function Navbar() {
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-1 lg:gap-10 md:flex">
-          {navLinks.map(({ href, label }, index) => (
+          {desktopNavLinks.map(({ href, label }, index) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`rounded-md px-3 py-2 text-[13px] font-mono uppercase text-text-secondary transition-colors hover:bg-foreground/5
-                  ${index === navLinks.length - 1 ? "font-semibold" : ""}
+                className={`rounded-md px-3 py-2 text-[13px] font-mono uppercase transition-colors hover:bg-foreground/5
+                  ${index === desktopNavLinks.length - 1 ? "font-semibold" : ""}
+                  ${pathname === href ? "text-accent-red" : "text-text-secondary"}
                 `}
               >
                 {label}
@@ -98,18 +107,19 @@ export function Navbar() {
             </nav>
 
             {/* Centered nav links */}
-            <ul className="flex flex-col bg-[#C5CAAA] h-full items-center gap-12">
+            <ul className="flex flex-col bg-[#C5CAAA] h-full items-center gap-6">
               <RequestInformation isDark />
+              <p className="text-[13px] font-mono uppercase text-text-secondary ">
+                Firm
+              </p>
               {navLinks.map(({ href, label }) => (
                 <li key={href}>
                   <SheetClose
                     render={
                       <Link
                         href={href}
-                        className={`text-xl py-2 font-mono uppercase tracking-wide transition-colors hover:text-foreground ${
-                          pathname === href
-                            ? "text-foreground"
-                            : "text-text-secondary"
+                        className={`text-[15px] py-1 font-geist tracking-wide transition-colors hover:text-foreground ${
+                          pathname === href ? "text-accent-red" : ""
                         }`}
                       />
                     }
@@ -118,6 +128,22 @@ export function Navbar() {
                   </SheetClose>
                 </li>
               ))}
+              <p className="text-[13px] mt-2 font-mono uppercase text-text-secondary ">
+                Contact
+              </p>
+              <div className="text-[15px] py-1 font-geist tracking-wide transition-colors hover:text-foreground">
+                <a href="mailto:office@laddco.com">office@laddco.com</a>
+              </div>
+              <SheetClose
+                render={
+                  <Link
+                    href="/client-login"
+                    className="text-[13px] font-mono uppercase border-t border-border pt-6 cursor-pointer w-full text-center"
+                  />
+                }
+              >
+                Client Login
+              </SheetClose>
             </ul>
           </SheetContent>
         </Sheet>

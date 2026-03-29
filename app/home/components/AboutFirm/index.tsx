@@ -25,7 +25,7 @@ const AboutTheFirm = () => {
 
         {/* Text content */}
         <div className="flex-1 mx-4 md:mx-0 px-8 py-8 md:py-16 border-x md:border-x-0 border-border">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 pl-0 md:pl-10">
             <p className="font-mono text-[13px] uppercase tracking-widest text-text-secondary">
               About the Firm
             </p>

@@ -22,11 +22,11 @@ const ppEiko = localFont({
       weight: "300",
       style: "normal",
     },
-    {
-      path: "../assets/fonts/PPEiko-Thin.otf",
-      weight: "400",
-      style: "normal",
-    },
+    // {
+    //   path: "../assets/fonts/PPEiko-Medium.otf",
+    //   weight: "400",
+    //   style: "normal",
+    // },
     {
       path: "../assets/fonts/PPEiko-Medium.otf",
       weight: "500",
@@ -48,7 +48,7 @@ const ppEiko = localFont({
       style: "italic",
     },
     {
-      path: "../assets/fonts/PP Eiko Italic.ttf",
+      path: "../assets/fonts/PP Eiko Italic Light.ttf",
       weight: "400",
       style: "italic",
     },
@@ -76,6 +76,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${ppEiko.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">

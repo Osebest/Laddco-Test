@@ -52,6 +52,10 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+body {
+  font-synthesis: weight style;
+}
+
 :root {
   --background: #f3f1ef;
   --foreground: #25211b;
