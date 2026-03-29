@@ -51,6 +51,16 @@ export function PageLoadAnimation() {
       tl.to(".loader-col-2", { yPercent: 100, duration: 1.2 }, "<");
       tl.to(".loader-col-3", { yPercent: -100, duration: 1.2 }, "<");
 
+      // Reveal page content as columns start sliding away
+      tl.call(
+        () => {
+          const content = document.querySelector(".page-content");
+          if (content) (content as HTMLElement).style.visibility = "visible";
+        },
+        [],
+        "-=1.2",
+      );
+
       tlRef.current = tl;
 
       // If images already loaded before timeline was created
@@ -66,17 +76,44 @@ export function PageLoadAnimation() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-99999 flex overflow-hidden"
+      className="page-loader fixed inset-0 z-99999 flex overflow-hidden"
     >
       {/* Three equal columns with hero images */}
       <div className="loader-col-1 relative w-1/3 h-full">
-        <Image src={hero1} alt="" fill className="object-cover" sizes="33vw" quality={80} priority onLoad={handleImageLoad} />
+        <Image
+          src={hero1}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="33vw"
+          quality={80}
+          priority
+          onLoad={handleImageLoad}
+        />
       </div>
       <div className="loader-col-2 relative w-1/3 h-full">
-        <Image src={hero2} alt="" fill className="object-cover" sizes="33vw" quality={80} priority onLoad={handleImageLoad} />
+        <Image
+          src={hero2}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="33vw"
+          quality={80}
+          priority
+          onLoad={handleImageLoad}
+        />
       </div>
       <div className="loader-col-3 relative w-1/3 h-full">
-        <Image src={hero3} alt="" fill className="object-cover" sizes="33vw" quality={80} priority onLoad={handleImageLoad} />
+        <Image
+          src={hero3}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="33vw"
+          quality={80}
+          priority
+          onLoad={handleImageLoad}
+        />
       </div>
 
       {/* Centered text overlay — starts off-screen left via CSS to prevent flash */}

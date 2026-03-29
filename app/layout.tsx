@@ -91,9 +91,11 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <PageLoadAnimation />
         <SmoothScroll>
-          <Navbar />
-          {children}
-          <Footer />
+          <div className="page-content">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
         </SmoothScroll>
       </body>
     </html>

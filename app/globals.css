@@ -56,6 +56,11 @@ body {
   font-synthesis: weight style;
 }
 
+/* Hide page content until loader animation completes — prevents flash of content before JS hydration */
+body:has(.page-loader) .page-content {
+  visibility: hidden;
+}
+
 :root {
   --background: #f3f1ef;
   --foreground: #25211b;
