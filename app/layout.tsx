@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,11 +23,11 @@ const ppEiko = localFont({
       weight: "300",
       style: "normal",
     },
-    // {
-    //   path: "../assets/fonts/PPEiko-Medium.otf",
-    //   weight: "400",
-    //   style: "normal",
-    // },
+    {
+      path: "../assets/fonts/PPEiko-Medium.otf",
+      weight: "400",
+      style: "normal",
+    },
     {
       path: "../assets/fonts/PPEiko-Medium.otf",
       weight: "500",
@@ -76,13 +77,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-scroll-behavior="smooth"
       className={`${ppEiko.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
