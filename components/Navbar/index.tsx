@@ -11,7 +11,7 @@ import {
   SheetContent,
   SheetClose,
 } from "@/components/ui/sheet";
-import RequestInformation from "@/app/home/components/RequestInformation";
+import SquareDot from "../Dot";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -35,7 +35,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
-      <nav className="mx-3.75 md:mx-auto flex h-15 max-w-7xl border-l border-r md:border-r-0 items-center justify-between pr-4">
+      <nav className="mx-4 md:mx-auto flex h-15 max-w-7xl border-l border-r md:border-r-0 items-center justify-between pr-4">
         {/* Logo + Company name */}
         <Link href="/" className="flex items-center md:gap-8">
           <div className="w-14 mx-auto h-15 flex items-center justify-center md:border-r md:border-border">
@@ -82,11 +82,10 @@ export function Navbar() {
 
           <SheetContent
             side="top"
-            className="h-dvh w-full bg-background"
+            className="h-dvh w-full bg-background gap-0"
             showCloseButton={false}
           >
-            {/* Mirror the mobile navbar header */}
-            <nav className="mx-4 flex h-15 border-l border-r items-center justify-between pr-4">
+            <nav className="flex h-15 border-l border-r items-center justify-between pr-4">
               <Link href="/" className="flex items-center gap-8">
                 <Image
                   src="/logo.png"
@@ -108,7 +107,18 @@ export function Navbar() {
 
             {/* Centered nav links */}
             <ul className="flex flex-col bg-[#C5CAAA] h-full items-center gap-6">
-              <RequestInformation isDark />
+              <div
+                className={`w-full cursor-pointer flex items-center justify-between gap-8 bg-linear-to-r from-[#C5CAAA] to-text-primary/70`}
+              >
+                <div
+                  className={`h-11 w-19.5 flex items-center justify-center border-x border-border`}
+                >
+                  <SquareDot />
+                </div>
+                <h1 className="font-medium w-full">
+                  Request an Introduction →
+                </h1>
+              </div>
               <p className="text-[13px] font-mono uppercase text-text-secondary ">
                 Firm
               </p>
