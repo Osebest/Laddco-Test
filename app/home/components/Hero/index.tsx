@@ -11,7 +11,6 @@ const HeroSection = () => {
           <SquareDot />
         </div>
 
-        {/* Text content */}
         <div className="flex-1 border-x md:border-x-0 border-border mx-4 md:mx-0 px-8 py-8 md:py-16">
           <p className="text-[32px] md:text-[56px] leading-[120%] md:leading-[110%]">
             Advisory and execution for{" "}
@@ -27,7 +26,6 @@ const HeroSection = () => {
           </p>
         </div>
 
-        {/* Hero image – small on mobile, large on desktop */}
         <div className="w-full md:max-w-96 md:shrink md:min-w-0 border-x border-border">
           <Image
             src={heroSmall}
@@ -41,7 +39,6 @@ const HeroSection = () => {
             src={heroLarge}
             alt="Ladd & Co. hero"
             className="hidden md:block w-full h-auto object-cover my-8"
-            sizes="(max-width: 768px) 0px, 384px"
             quality={80}
             priority
           />

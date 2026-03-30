@@ -38,7 +38,7 @@ export function PageLoadAnimation() {
         duration: 1,
       });
 
-      // Hold for a moment
+      // A little pause with text fully visible before sliding columns away
       tl.to({}, { duration: 0.5 });
 
       // Fade out text and slide images simultaneously
@@ -63,7 +63,7 @@ export function PageLoadAnimation() {
 
       tlRef.current = tl;
 
-      // If images already loaded before timeline was created
+      // Image load optimization: start animation as soon as all images are loaded to prevent flash of unstyled content
       if (imagesLoaded >= 3) {
         tl.play();
       }
@@ -78,7 +78,6 @@ export function PageLoadAnimation() {
       ref={containerRef}
       className="page-loader fixed inset-0 z-99999 flex overflow-hidden"
     >
-      {/* Three equal columns with hero images */}
       <div className="loader-col-1 relative w-1/3 h-full">
         <Image
           src={hero1}
@@ -116,7 +115,6 @@ export function PageLoadAnimation() {
         />
       </div>
 
-      {/* Centered text overlay — starts off-screen left via CSS to prevent flash */}
       <div className="loader-text absolute inset-0 flex items-center justify-center pointer-events-none -translate-x-[200%]">
         <h1 className="text-white text-4xl md:text-7xl font-medium tracking-tight drop-shadow-lg">
           Ladd &amp; Co.

@@ -1,4 +1,3 @@
-import React from "react";
 import RequestInformation from "./components/RequestInformation";
 import HeroSection from "./components/Hero";
 import SectionMarker from "@/components/SectionMarker";

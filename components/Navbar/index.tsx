@@ -36,7 +36,6 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <nav className="mx-4 md:mx-auto flex h-15 max-w-7xl border-l border-r md:border-r-0 items-center justify-between pr-4">
-        {/* Logo + Company name */}
         <Link href="/" className="flex items-center md:gap-8">
           <div className="w-14 mx-auto h-15 flex items-center justify-center md:border-r md:border-border">
             <Image
@@ -104,8 +103,6 @@ export function Navbar() {
                 <Image src={menuIcon} alt="Close menu" width={24} height={24} />
               </SheetClose>
             </nav>
-
-            {/* Centered nav links */}
             <ul className="flex flex-col bg-[#C5CAAA] h-full items-center gap-6">
               <div
                 className={`w-full cursor-pointer flex items-center justify-between gap-8 bg-linear-to-r from-[#C5CAAA] to-text-primary/70`}

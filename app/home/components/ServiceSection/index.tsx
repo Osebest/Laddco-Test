@@ -21,7 +21,6 @@ const ServiceSection = () => {
           className="px-6 md:px-0 md:py-18 md:hidden"
         />
 
-        {/* Text content */}
         <div className="flex-1 mx-4 md:mx-0 px-8 py-8 md:py-16 border-x md:border-x-0 md:border-r border-border">
           <div className="flex flex-col gap-8">
             <p className="hidden md:block font-mono text-[13px] uppercase tracking-widest text-text-secondary">
@@ -33,7 +32,6 @@ const ServiceSection = () => {
           </div>
         </div>
 
-        {/* Image */}
         <div className="w-full md:max-w-150.5 md:shrink md:min-w-0 border-x border-border">
           <Image
             src={heroSmall}
@@ -46,7 +44,6 @@ const ServiceSection = () => {
             src={heroLarge}
             alt="ServiceSection"
             className="hidden md:block w-full h-auto object-cover my-8"
-            sizes="(max-width: 768px) 0px, 600px"
             quality={80}
           />
         </div>
@@ -59,7 +56,6 @@ const ServiceSection = () => {
           className="px-6 md:px-0 md:py-22 hidden md:flex"
         />
 
-        {/* Text content */}
         <div>
           <div className="flex-1 mx-4 md:mx-0 md:border-t border-x md:border-x-0 border-border">
             <div className="grid grid-cols-1 md:grid-cols-2 -mb-px -mr-px">

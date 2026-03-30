@@ -52,10 +52,6 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-body {
-  font-synthesis: weight style;
-}
-
 /* Hide page content until loader animation completes — prevents flash of content before JS hydration */
 body:has(.page-loader) .page-content {
   visibility: hidden;

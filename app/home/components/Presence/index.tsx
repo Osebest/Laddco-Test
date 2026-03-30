@@ -18,7 +18,6 @@ const Presence = () => {
           className="px-6 md:px-0 md:py-16 hidden md:flex"
         />
 
-        {/* Text content */}
         <div className="flex-1 mx-4 md:mx-0 text-text-secondary border-x md:border-x-0 border-border p-6 md:py-16 md:px-16">
           <p className="text-[13px] font-mono mb-16 uppercase hidden md:block">
             Presence

@@ -25,7 +25,7 @@ Ladd & Co. is a private advisory practice. We represent clients across transacti
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-org/Laddco-Test.git
+   git clone https://github.com/Osebest/Laddco-Test
    cd Laddco-Test
    ```
 
@@ -57,7 +57,16 @@ Ladd & Co. is a private advisory practice. We represent clients across transacti
 ```
 app/
   layout.tsx      # Root layout (fonts, global styles)
-  page.tsx        # Homepage
+  page.tsx        # Root page that routes to home
+  home/
+     page.tsx      # Home page with all sections
+     components/   # Reusable components for the home page
+       Hero/
+       Clients/
+       ServiceSection/
+       Presence/
+       AboutFirm/
+       ...
   globals.css     # Global styles & Tailwind imports
 public/           # Static assets
 ```

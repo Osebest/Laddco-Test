@@ -35,7 +35,6 @@ export function Footer() {
             className="h-6"
           />
         </div>
-        {/* Logo + Company name */}
         <div className="md:border-x border-[#F3F1EF0F] text-[13px] w-full flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-0">
           <div className="p-6 md:p-16 w-full">
             <div className="flex items-center gap-3 mb-6">
@@ -54,7 +53,12 @@ export function Footer() {
               Advisory and execution for families, principals, and private
               institutions with interests that demand discretion.
             </p>
-            <p className="font-mono uppercase">Client Login</p>
+            <Link
+              href={"/client-login"}
+              className="font-mono uppercase hover:text-[#F3F1EF80]"
+            >
+              Client Login
+            </Link>
             <div className="mt-16 md:mt-47 flex items-center gap-6">
               <a
                 href="https://x.com"
