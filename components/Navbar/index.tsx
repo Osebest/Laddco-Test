@@ -105,15 +105,18 @@ export function Navbar() {
             </nav>
             <ul className="flex flex-col bg-[#C5CAAA] h-full items-center gap-6">
               <div
-                className={`w-full cursor-pointer flex items-center justify-between gap-8 bg-linear-to-r from-[#C5CAAA] to-text-primary/70`}
+                className={`w-full flex items-center justify-between gap-8 bg-linear-to-r from-[#C5CAAA] to-text-primary/70`}
               >
                 <div
                   className={`h-11 w-19.75 flex items-center justify-center border-x border-border`}
                 >
                   <SquareDot />
                 </div>
-                <h1 className="font-medium w-full">
-                  Request an Introduction →
+                <h1 className="font-medium w-full group cursor-pointer">
+                  Request an Introduction{" "}
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">
+                    →
+                  </span>
                 </h1>
               </div>
               <p className="text-[13px] font-mono uppercase text-text-secondary ">

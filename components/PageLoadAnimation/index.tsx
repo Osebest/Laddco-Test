@@ -116,7 +116,7 @@ export function PageLoadAnimation() {
       </div>
 
       <div className="loader-text absolute inset-0 flex items-center justify-center pointer-events-none -translate-x-[200%]">
-        <h1 className="text-white text-4xl md:text-7xl font-medium tracking-tight drop-shadow-lg">
+        <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight drop-shadow-lg">
           Ladd &amp; Co.
         </h1>
       </div>

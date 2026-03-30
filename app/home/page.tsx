@@ -16,7 +16,7 @@ const Home = () => {
         <div className="bg-[#C5CAAA] max-w-7xl mx-auto flex flex-col md:flex-row">
           <SectionMarker className="px-22 md:px-0 md:py-22" />
           <div className="py-6 md:py-22 mx-4 md:mx-0 px-8 border-x border-border">
-            <p className="text-[22px] md:text-[32px] mb-6 md:mb-8 leading-[130%]">
+            <p className="text-[22px] md:text-[26px] lg:text-[32px] mb-6 md:mb-8 leading-[130%]">
               We operate as an extension of our clients' interests — advising,
               coordinating, and executing where the complexity demands a single,
               trusted point of contact.
@@ -36,7 +36,7 @@ const Home = () => {
         <div className="bg-[#C5CAAA] max-w-7xl mx-auto flex flex-row">
           <SectionMarker vertical className="py-12 md:py-22" />
           <div className="py-12 grow md:py-22 mx-4 md:mx-0 px-4 md:border-x border-border">
-            <p className="text-[22px] md:text-[48px] mb-6 md:mb-8 leading-[130%] italic">
+            <p className="text-[22px] md:text-[34px] lg:text-[48px] mb-6 md:mb-8 leading-[130%] italic">
               Discretion is not a policy. <br />
               It is the nature of the work.
             </p>

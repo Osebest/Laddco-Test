@@ -8,7 +8,7 @@ const RequestInformation = ({ isDark }: RequestInformationProps) => {
   return (
     <div className={`h-11 ${isDark ? "md:bg-text-primary w-full!" : ""}`}>
       <div
-        className={`max-w-7xl cursor-pointer md:mx-auto flex items-center justify-between gap-4 md:gap-8 bg-linear-to-r from-[#C5CAAA] ${isDark ? "to-text-primary/80" : "to-[#F3F1EF]"}`}
+        className={`max-w-7xl md:mx-auto flex items-center justify-between gap-4 md:gap-8 bg-linear-to-r from-[#C5CAAA] ${isDark ? "to-text-primary/80" : "to-[#F3F1EF]"}`}
       >
         {!isDark && (
           <div className="w-5 flex md:hidden border-x border-border h-11 items-center justify-center">
@@ -20,7 +20,12 @@ const RequestInformation = ({ isDark }: RequestInformationProps) => {
         >
           <SquareDot />
         </div>
-        <h1 className="font-medium w-full">Request an Introduction →</h1>
+        <h1 className="font-medium w-full group cursor-pointer">
+          Request an Introduction{" "}
+          <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">
+            →
+          </span>
+        </h1>
         {!isDark && (
           <div className="w-5 flex md:hidden border-x border-border h-11 items-center justify-center">
             <SquareDot />

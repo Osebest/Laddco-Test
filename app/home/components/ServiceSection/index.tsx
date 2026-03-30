@@ -26,7 +26,7 @@ const ServiceSection = () => {
             <p className="hidden md:block font-mono text-[13px] uppercase tracking-widest text-text-secondary">
               Services
             </p>
-            <p className="text-[32px] md:text-[48px] leading-[130%]">
+            <p className="text-[32px] md:text-[36px] lg:text-[48px] leading-[130%]">
               Advisory <br />& Execution
             </p>
           </div>

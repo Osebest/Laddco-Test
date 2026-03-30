@@ -30,7 +30,7 @@ const AboutTheFirm = () => {
             <p className="font-mono text-[13px] uppercase tracking-widest text-text-secondary">
               About the Firm
             </p>
-            <p className="text-[22px] md:text-[48px] leading-[130%]">
+            <p className="text-[22px] md:text-[34px] lg:text-[48px] leading-[130%]">
               We advise where the stakes are highest and the margin for error is
               smallest.
             </p>

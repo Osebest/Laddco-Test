@@ -12,7 +12,7 @@ const HeroSection = () => {
         </div>
 
         <div className="flex-1 border-x md:border-x-0 border-border mx-4 md:mx-0 px-8 py-8 md:py-16">
-          <p className="text-[32px] md:text-[56px] leading-[120%] md:leading-[110%]">
+          <p className="text-[32px] md:text-[40px] lg:text-[56px] leading-[120%] md:leading-[115%] lg:leading-[110%]">
             Advisory and execution for{" "}
             <span className="italic">
               families, principals, and private institutions

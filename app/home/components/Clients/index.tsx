@@ -41,7 +41,7 @@ const Clients = () => {
             <p className="font-mono hidden md:block text-[13px] uppercase tracking-widest text-text-secondary">
               Who We Serve
             </p>
-            <p className="text-[22px] md:text-[32px] leading-[130%]">
+            <p className="text-[22px] md:text-[26px] lg:text-[32px] leading-[130%]">
               Our clients are{" "}
               <span className="italic">
                 entrepreneurs, principals, and multi-generational families
