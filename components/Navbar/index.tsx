@@ -85,19 +85,23 @@ export function Navbar() {
             showCloseButton={false}
           >
             <nav className="flex h-15 border-l border-r items-center justify-between pr-4">
-              <Link href="/" className="flex items-center gap-8">
-                <Image
-                  src="/logo.png"
-                  alt="Ladd & Co. logo"
-                  width={36}
-                  height={36}
-                  className="h-15 w-auto px-4 py-4 border-r border-border"
-                  priority
-                />
-                <span className="text-lg font-medium tracking-tight">
-                  Ladd &amp; Co.
-                </span>
-              </Link>
+              <SheetClose
+                render={
+                  <Link href="/" className="flex items-center gap-8">
+                    <Image
+                      src="/logo.png"
+                      alt="Ladd & Co. logo"
+                      width={36}
+                      height={36}
+                      className="h-15 w-auto px-4 py-4 border-r border-border"
+                      priority
+                    />
+                    <span className="text-lg font-medium tracking-tight">
+                      Ladd &amp; Co.
+                    </span>
+                  </Link>
+                }
+              />
 
               <SheetClose render={<Button variant="ghost" size="icon" />}>
                 <Image src={menuIcon} alt="Close menu" width={24} height={24} />
