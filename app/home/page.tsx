@@ -1,6 +1,9 @@
+"use client";
+
 import RequestInformation from "./components/RequestInformation";
 import HeroSection from "./components/Hero";
 import SectionMarker from "@/components/SectionMarker";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import AboutTheFirm from "./components/AboutFirm";
 import ServiceSection from "./components/ServiceSection";
 import Clients from "./components/Clients";
@@ -15,7 +18,7 @@ const Home = () => {
       <div className="border-y border-border">
         <div className="bg-[#C5CAAA] max-w-7xl mx-auto flex flex-col md:flex-row">
           <SectionMarker className="px-22 md:px-0 md:py-22" />
-          <div className="py-6 md:py-22 mx-4 md:mx-0 px-8 border-x border-border">
+          <ScrollReveal className="py-6 md:py-22 mx-4 md:mx-0 px-8 border-x border-border">
             <p className="text-[22px] md:text-[26px] lg:text-[32px] mb-6 md:mb-8 leading-[130%]">
               We operate as an extension of our clients' interests — advising,
               coordinating, and executing where the complexity demands a single,
@@ -26,7 +29,7 @@ const Home = () => {
               dispute, or an opportunity — our role is to ensure the outcome is
               resolved efficiently, discreetly, and in the client's favour.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
       <AboutTheFirm />
@@ -35,7 +38,7 @@ const Home = () => {
       <div className="border-y border-border">
         <div className="bg-[#C5CAAA] max-w-7xl mx-auto flex flex-row">
           <SectionMarker vertical className="py-12 md:py-22" />
-          <div className="py-12 grow md:py-22 mx-4 md:mx-0 px-4 md:border-x border-border">
+          <ScrollReveal className="py-12 grow md:py-22 mx-4 md:mx-0 px-4 md:border-x border-border">
             <p className="text-[22px] md:text-[34px] lg:text-[48px] mb-6 md:mb-8 leading-[130%] italic">
               Discretion is not a policy. <br />
               It is the nature of the work.
@@ -55,7 +58,7 @@ const Home = () => {
                 foundation of it.
               </span>
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
       <Industries />

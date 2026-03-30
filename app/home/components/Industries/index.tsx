@@ -1,4 +1,7 @@
+"use client";
+
 import SectionMarker from "@/components/SectionMarker";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Industries = () => {
   return (
@@ -23,7 +26,10 @@ const Industries = () => {
           <p className="text-[13px] font-mono mb-16 uppercase hidden md:block">
             Industries
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 text-[15px] font-geist">
+          <ScrollReveal
+            stagger={0.06}
+            className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 text-[15px] font-geist"
+          >
             <p className="pb-4.25 border-b border-border">
               Technology & Software
             </p>
@@ -58,7 +64,7 @@ const Industries = () => {
             <p className="pb-4.25 border-b border-border">
               Media & Telecommunications
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>

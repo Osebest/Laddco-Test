@@ -1,4 +1,7 @@
+"use client";
+
 import SectionMarker from "@/components/SectionMarker";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import heroLarge from "@/assets/images/hero3-large.jpg";
 import heroSmall from "@/assets/images/her03-small.jpg";
@@ -22,14 +25,14 @@ const ServiceSection = () => {
         />
 
         <div className="flex-1 mx-4 md:mx-0 px-8 py-8 md:py-16 border-x md:border-x-0 md:border-r border-border">
-          <div className="flex flex-col gap-8">
+          <ScrollReveal direction="left" className="flex flex-col gap-8">
             <p className="hidden md:block font-mono text-[13px] uppercase tracking-widest text-text-secondary">
               Services
             </p>
             <p className="text-[32px] md:text-[36px] lg:text-[48px] leading-[130%]">
               Advisory <br />& Execution
             </p>
-          </div>
+          </ScrollReveal>
         </div>
 
         <div className="w-full md:max-w-150.5 md:shrink md:min-w-0 border-x border-border">
