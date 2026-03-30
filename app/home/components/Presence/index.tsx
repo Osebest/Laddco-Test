@@ -1,4 +1,7 @@
+"use client";
+
 import SectionMarker from "@/components/SectionMarker";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Presence = () => {
   return (
@@ -22,7 +25,10 @@ const Presence = () => {
           <p className="text-[13px] font-mono mb-16 uppercase hidden md:block">
             Presence
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-[24px] md:text-[20px] lg:text-[24px]">
+          <ScrollReveal
+            stagger={0.08}
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-[24px] md:text-[20px] lg:text-[24px]"
+          >
             <div className="pb-4.25 border-b border-border">
               <p>New York, New York</p>
               <p className="font-mono text-[13px] uppercase text-accent-red mt-2">
@@ -77,7 +83,7 @@ const Presence = () => {
                 Australia
               </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>

@@ -1,4 +1,7 @@
+"use client";
+
 import SectionMarker from "@/components/SectionMarker";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import heroLarge from "@/assets/images/hero4-large.jpg";
 import heroSmall from "@/assets/images/hero4-small.jpg";
@@ -37,7 +40,7 @@ const Clients = () => {
         </div>
 
         <div className="flex-1 my-auto mx-4 md:mx-0 md:ml-10 px-6 py-8 md:py-16 border-x md:border-x-0 md:border-r border-border">
-          <div className="flex flex-col gap-8">
+          <ScrollReveal direction="right" className="flex flex-col gap-8">
             <p className="font-mono hidden md:block text-[13px] uppercase tracking-widest text-text-secondary">
               Who We Serve
             </p>
@@ -49,7 +52,7 @@ const Clients = () => {
               </span>{" "}
               across multiple jurisdictions.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto border-x border-t md:border-t-0 border-border">

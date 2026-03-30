@@ -1,4 +1,7 @@
+"use client";
+
 import SectionMarker from "@/components/SectionMarker";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import heroLarge from "@/assets/images/hero2-large.jpg";
 import heroSmall from "@/assets/images/hero2-small.jpg";
@@ -26,7 +29,7 @@ const AboutTheFirm = () => {
         </div>
 
         <div className="flex-1 mx-4 md:mx-0 px-8 py-8 md:py-16 border-x md:border-x-0 border-border">
-          <div className="flex flex-col gap-8 pl-0 md:pl-10">
+          <ScrollReveal className="flex flex-col gap-8 pl-0 md:pl-10">
             <p className="font-mono text-[13px] uppercase tracking-widest text-text-secondary">
               About the Firm
             </p>
@@ -48,7 +51,7 @@ const AboutTheFirm = () => {
               alignment, identifying gaps, and resolving issues that fall
               between the cracks.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>
