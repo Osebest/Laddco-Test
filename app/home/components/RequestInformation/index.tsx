@@ -1,4 +1,5 @@
 import SquareDot from "@/components/Dot";
+import Link from "next/link";
 
 interface RequestInformationProps {
   isDark?: boolean;
@@ -7,7 +8,8 @@ interface RequestInformationProps {
 const RequestInformation = ({ isDark }: RequestInformationProps) => {
   return (
     <div className={`h-11 ${isDark ? "md:bg-text-primary w-full!" : ""}`}>
-      <div
+      <Link
+        href="/contact"
         className={`max-w-7xl md:mx-auto flex items-center justify-between gap-4 md:gap-8 bg-linear-to-r from-[#C5CAAA] ${isDark ? "to-text-primary/80" : "to-[#F3F1EF]"}`}
       >
         {!isDark && (
@@ -31,7 +33,7 @@ const RequestInformation = ({ isDark }: RequestInformationProps) => {
             <SquareDot />
           </div>
         )}
-      </div>
+      </Link>
     </div>
   );
 };
